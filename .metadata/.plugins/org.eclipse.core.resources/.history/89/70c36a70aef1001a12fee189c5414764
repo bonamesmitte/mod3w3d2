@@ -1,0 +1,40 @@
+package com.springmvc.homecontroller;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.springmvc.model.ContactInfo;
+import com.springmvc.model.PrivateInfo;
+import com.springmvc.model.User;
+
+@Controller
+@RequestMapping(value="/form")
+public class HomeController {
+	
+	 @RequestMapping(method = RequestMethod.POST)
+	    public String processRegistration(@ModelAttribute("userForm") User user, ContactInfo contact, PrivateInfo pri,
+	            Map<String, Object> model) {
+	         
+	        // implement your own registration logic here...
+	         
+	        // for testing purpose:
+	        System.out.println("First Name: " + user.getFirstName());
+	        System.out.println("Last Name: " + user.getLastName());
+	        System.out.println("UserName: " + user.getUserName());
+	        System.out.println("Gender: " + user.getGender());
+	        System.out.println("Phone Number: " + contact.getPhoneNumber());
+	        System.out.println("Email: " + contact.getEmail());
+	        System.out.println("LinkedIn URL: " + contact.getLinkedin());
+	        System.out.println("Social Security Number: " + pri.getSsn());
+	        System.out.println("Credit Card Number: " + pri.getCreditCardNum());
+	        System.out.println("Date of Birth (mm/dd/yyyy): " + pri.getDateBirth());
+	    
+	        return "RegistrationSuccess";
+	    }
+	 
+
+}

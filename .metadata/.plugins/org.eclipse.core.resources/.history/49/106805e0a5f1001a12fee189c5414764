@@ -1,0 +1,26 @@
+package com.springmvc.model;
+
+public class PrivateInfo {
+	
+	private int ssn;
+	private int creditCardNum;
+	private int dateBirth;
+
+	public int getSsn() {
+		return ssn;
+	}
+	public void setSsn(int ssn) {
+		this.ssn = ssn;
+	}
+	public int getCreditCardNum() {
+		return creditCardNum;
+	}
+	public void setCreditCardNum(int creditCardNum) {
+		this.creditCardNum = creditCardNum;
+	}
+	public int getDateBirth() {
+		return dateBirth;
+	}
+	public void setDateBirth(int dateBirth) {
+		this.dateBirth = dateBirth;
+}
